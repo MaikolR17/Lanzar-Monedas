@@ -6,10 +6,13 @@ function fiveHeads() {
     return new Promise((resolve, reject) => { 
         let headsCount = 0;
         let attempts = 0;
+
         while (headsCount < 5) {
             attempts++;
-            console.log(tossCoin())
-            if (tossCoin() === "heads") {
+            let result = tossCoin();
+            console.log(result);
+            
+            if (result === "heads") {
                 headsCount++;
             } else {
                 headsCount = 0;
